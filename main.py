@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, json, jsonify
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -24,7 +24,7 @@ def params():
 
 @app.route('/post', methods = ['POST'])
 def post():
-  return request
+  return request.get_json()
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port = 5222, threaded = True, debug = True)
