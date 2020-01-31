@@ -3,6 +3,6 @@ p {
   font-size: 20px;
 }
 
-a {
+.active > a {
     color: red;
 }
